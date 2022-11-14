@@ -1,0 +1,56 @@
+{
+  "name": "@web3mason/token-contracts",
+  "version": "1.0.0",
+  "description": "Web3Mason token (W3M)",
+  "license": "MIT",
+  "author": {
+    "name": "web3mason.io",
+    "email": "support@web3mason.io",
+    "url": "https://web3mason.io/"
+  },
+  "scripts": {
+    "clean": "rimraf ./build/ && mkdirp ./build/ && rimraf ./flatten/ && mkdirp ./flatten/",
+    "precompile": "yarn clean",
+    "compile": "truffle compile",
+    "postcompile": "yarn run flatten",
+    "predeploy": "yarn run compile",
+    "deploy": "truffle migrations --network",
+    "verify": "truffle run verify --network",
+    "test": "truffle test",
+    "flatten": "waffle flatten",
+    "ganache": "node ./scripts/ganache-cli.js"
+  },
+  "homepage": "https://github.com/web3mason/token-contracts#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/web3mason/token-contracts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/web3mason/token-contracts/issues",
+    "email": "support@web3mason.io"
+  },
+  "files": [
+    "contracts",
+    "build"
+  ],
+  "dependencies": {
+    "@openzeppelin/contracts": "4.8.0"
+  },
+  "devDependencies": {
+    "@truffle/hdwallet-provider": "^2.1.1",
+    "dotenv": "^16.0.3",
+    "ethereum-waffle": "^3.4.4",
+    "ganache-cli": "^6.12.2",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "truffle": "^5.6.5",
+    "truffle-plugin-verify": "^0.5.33"
+  },
+  "contributors": [
+    {
+      "name": "Aleksandr Ivannikov",
+      "email": "info@ivannikov.pro",
+      "url": "https://ivannikov.pro/"
+    }
+  ]
+}

@@ -1,2 +1,1 @@
-# contracts
-Web3Mason World Smart Contracts
+# Web3Mason token (W3M)
