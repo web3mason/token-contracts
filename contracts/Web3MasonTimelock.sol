@@ -17,8 +17,8 @@ import "@openzeppelin/contracts/governance/TimelockController.sol";
 /// @custom:security-contact support@web3mason.io
 contract Web3MasonTimelock is TimelockController {
     uint256 private _minDelay = 172800;
-    address[] private _proposers = [0x5a9a4E967C22A38487264cb36f2A3FA79d55e03b];
-    address[] private _executors = [0x5a9a4E967C22A38487264cb36f2A3FA79d55e03b];
+    address[] private _proposers = [0xC6ed5651AA675D4E8D71E9B9938E534df9fAB8b5];
+    address[] private _executors = [0xC6ed5651AA675D4E8D71E9B9938E534df9fAB8b5];
     address private _admin = address(0);
 
     constructor()
